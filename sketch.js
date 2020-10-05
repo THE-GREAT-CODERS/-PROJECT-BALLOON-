@@ -40,7 +40,7 @@ textSize(20);
 text("SCORE:"+score,270,30);  
 }
 function arrow(){
-if(keyDown("space")){  
+if(keyDown("space")&&World.frameCount%60===0){  
 var arrow = createSprite(bow.x,bow.y,10,10);
  arrow.addImage(arrowI);
  arrow.scale=0.5;
@@ -48,6 +48,7 @@ var arrow = createSprite(bow.x,bow.y,10,10);
  arrow.lifetime=200; 
   
 }
+ 
 var i = Math.round(random(50,400));
 var w = Math.round(random(100,350));
 var v=  Math.round(random(1,4)); 
